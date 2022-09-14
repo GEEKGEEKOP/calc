@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        textarea{
+          align-content: center;
+        }
+        input{
+            width: 200px;
+            height: 50px;
+            font-size: 22px;
+            color: blue;
+        }
+        button{
+            width: 100px;
+            height: 100px;
+            font-size: large;
+        }
+        .text3{
+            position: absolute;
+            left: 1100px;
+            top: -0px;
+
+            width: 200px;
+            height: 500px;
+        }
+        #text{
+          font-size: 10px;
+        }
+        table, th, td {
+  border:1px solid black;
+}
+    </style>
+</head>
+<body style="background-color: aqua;">
+
+    <form action="/" method="post">
+
+        <input type="text" name="gam11" id="gam1" placeholder={{data.gam1}}>
+        <input type="text" placeholder="+++++" value="+++++">
+        <input type="text" name="gam22" id="gam2" placeholder={{data.gam2}}>
+        <input type="submit" value="====" id="mosgam"  onclick="gam()">
+        <input type="text" name="gammm" id="gamm" value={{data.gam}}></input>
+
+    </form>
+    <br>
+  
+    <br>
+    <form action="/" method="post">
+
+        <input type="text" name="men11" id="men1" placeholder={{data.men1}}>
+        <input type="text" placeholder="-----------------" value="---------">
+        <input type="text" name="men22" id="men2" placeholder={{data.men2}}>
+        <input type="submit" value="====" id="mosmen" onclick="men()">
+        <input type="text" name="mennn" id="menn" value={{data.men}}>
+
+    </form>
+    <br>
+
+    <br>
+    <form action="/" method="post">
+
+        <input type="text" name="zab1" id="zab1" placeholder={{data.zab1}}>
+        <input type="text" placeholder="*****" value="‍‍‍‍*******">
+        <input type="text" name="zab2" id="zab2" placeholder={{data.zab2}}>
+        <input type="submit" value="====" id="moszab" onclick="zab()">
+        <input type="text" name="zabb" id="zabb" value={{data.zab}}>
+
+    </form>
+    <br>
+
+    <br>
+    <form action="/" method="post">
+
+        <input type="text" name="tag1" id="tag1" placeholder={{data.tag1}}>
+        <input type="text" placeholder="÷÷÷÷÷÷‍‍÷" value="÷÷÷÷÷">
+        <input type="text" name="tag2" id="tag2" placeholder={{data.tag2}}>
+        <input type="submit" value="====" id="mostag" onclick="tag()">
+        <input type="text" name="tagg" id="tagg" value={{data.tag}}>
+
+    </form>
+    <br>
+
+    <br>
+    <form action="/" method="post">
+
+        <input type="text" name="bag1" id="bag1" placeholder={{data.bag1}}>
+        <input type="text" placeholder="%%%%%%%%" value="%%%%%%%">
+        <input type="text" name="bag2" id="bag2" placeholder={{data.bag2}}>
+        <input type="submit" value="====" id="mosbag" onclick="bag()">
+        <input type="text" name="bagg" id="bagg" value={{data.bag}}>
+
+    </form>
+    <br>
+
+    <br>
+    <form action="/" method="post">
+
+        <input type="text" name="tav1" id="tav1" placeholder={{data.tav1}}>
+        <input type="text" placeholder="tavan ^" value="tavan^">
+        <input type="text" name="tav2" id="tav2" placeholder={{data.tav2}}>
+        <input type="submit" value="====" id="mostav" onclick="tav()">
+        <input type="text" name="tavv" id="tavv" value={{data.tav}}>
+
+    </form>
+
+    <button onclick="PI()">PI</button>
+    <div  name="text1" id="text2" class="text3">
+
+        <table>
+          <tr>
+            <th>تاریخ</th>
+            <th>زمان</th>
+            <th>عدد اول</th>
+            <th>عملیات</th>
+            <th>عدد دوم</th>
+            <th>پاسخ</th>
+          </tr>
+          <tr>
+            <td>111</td>
+            <td>222</td>
+            <td>333</td>
+            <td>444</td>
+            <td>555</td>
+            <td>666</td>
+          </tr>
+        </table>
+
+    </div>
+
+    <script >
+function gam(){
+    a=document.getElementById('gam1').value;
+    b=document.getElementById('gam2').value;
+    a=parseFloat(a)
+    b=parseFloat(b)
+    c=document.getElementById("gamm");
+    c.value = (a+b);
+}
+
+function men(){
+    a=document.getElementById('men1').value;
+    b=document.getElementById('men2').value;
+    a=parseFloat(a)
+    b=parseFloat(b)
+    c=document.getElementById("menn");
+    c.value = (a-b);
+}
+
+function zab(){
+    a=document.getElementById('zab1').value;
+    b=document.getElementById('zab2').value;
+    a=parseFloat(a)
+    b=parseFloat(b)
+    c=document.getElementById("zabb");
+    c.value = (a*b);
+}
+
+function tag(){
+    a=document.getElementById('tag1').value;
+    b=document.getElementById('tag2').value;
+    a=parseFloat(a)
+    b=parseFloat(b)
+    c=document.getElementById("tagg");
+    c.value = (a/b);
+}
+
+function bag(){
+    a=document.getElementById('bag1').value;
+    b=document.getElementById('bag2').value;
+    a=parseFloat(a)
+    b=parseFloat(b)
+    c=document.getElementById("bagg");
+    c.value = (a%b);
+}
+
+function tav(){
+    a=document.getElementById('tav1').value;
+    b=document.getElementById('tav2').value;
+    a1=parseFloat(a);
+    b2=parseFloat(b);
+    c2=document.getElementById("tavv");
+    c2.value = (Math.pow(a,b));
+}
+
+function PI(){
+    let a=Math.PI
+    console.log(a)
+    alert(a)
+
+}
+
+
+
+    </script>
+</body>
+</html>
